@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-number = 98
-print(f"{number} Battery street")
+number = 90
+if isinstance(number, int):
+    print(f"{number} Battery street")
