@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-from calculate_1 import add
-from calculate_1 import sub
-from calculate_1 import div
-from calculate_1 import mul
+from calculate_1 import add, sub, div, mul
 a = 10
 b = 5
 if __name__ == "__main__":
