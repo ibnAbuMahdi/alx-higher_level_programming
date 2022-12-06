@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 def print_reversed_list_integer(my_list=[]):
     ln = len(my_list)
+    if ln == 0:
+        print()
+        return
     ln *= -1
     i = -1
     while i >= ln:
