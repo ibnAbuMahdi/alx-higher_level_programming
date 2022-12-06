@@ -5,7 +5,7 @@ multiple_returns = __import__('8-multiple_returns').multiple_returns
 
 
 
-sentence = None
+sentence = ""
 
 length, first = multiple_returns(sentence)
 
