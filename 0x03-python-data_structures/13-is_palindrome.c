@@ -24,9 +24,11 @@ size_t listint_len(const listint_t *h)
 
 int is_palindrome(listint_t **h)
 {
+	size_t len;
+
 	if (!h)
 		return (0);
-	size_t len = listint_len(*h);
+	len = listint_len(*h);
 
 	if (len == 1 || len == 0)
 		return (1);
@@ -49,7 +51,7 @@ int compare(listint_t *h, int i, int f)
 		return (1);
 
 	node_i = get_nodeint_at_index(h, i);
-	node_t = get_nodeint_at_index(h, f);
+	node_f = get_nodeint_at_index(h, f);
 
 	if (i == f - 1)
 		return (node_i->n == node_f->n);
