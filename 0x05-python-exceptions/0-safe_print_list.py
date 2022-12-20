@@ -9,6 +9,7 @@ def safe_print_list(my_list=[], x=0):
     except IndexError:
         print("", end="")
         # do nothing
-    else:
-        print("")
+    finally:
+        if i > 0:
+            print("")
     return (i)
