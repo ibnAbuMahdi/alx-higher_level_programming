@@ -8,9 +8,9 @@ def list_division(l1, l2, x=0):
             res = l1[i] / l2[i]
             i += 1
         except TypeError:
-           i += 1
-           print("wrong type")
-           res = 0
+            i += 1
+            print("wrong type")
+            res = 0
         except ZeroDivisionError:
             i += 1
             print("division by 0")

@@ -8,8 +8,7 @@ def safe_print_list_integers(my_list=[], x=0):
             j += 1
             i += 1
         except (TypeError, ValueError):
-           i += 1
-           continue
+            i += 1
+            continue
     print("")
     return j
-
