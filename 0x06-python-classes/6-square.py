@@ -60,7 +60,4 @@ of 2 positive integers")
             for i in range(self.__size):
                 print(" "*self.__pos[0] + "#"*self.__size)
         else:
-            if self.__pos[1] > 0:
-                print("")
-            else:
-                print(" "*self.__pos[0])
+            print("")
