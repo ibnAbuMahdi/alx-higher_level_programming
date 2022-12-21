@@ -1,4 +1,6 @@
 #!/usr/bin/python
+""" This is a module for the class square """
+
 
 class Square:
     """ class of a square
