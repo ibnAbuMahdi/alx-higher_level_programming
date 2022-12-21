@@ -3,11 +3,11 @@
 import random
 
 number = random.randint(-10000, 10000)
-sign = 1;
-numb = number;
+sign = 1
+numb = number
 if number < 0:
-    numb = number * -1;
-    sign = -1;
+    numb = number * -1
+    sign = -1
 last_digit = sign * (numb % 10)
 
 if last_digit == 0:
