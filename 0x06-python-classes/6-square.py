@@ -15,11 +15,7 @@ class Square:
         else:
             self.__size = size
 
-        if self.isTuple(pos):
-            self.__pos = pos
-        else:
-            raise TypeError("position must be a\
-tuple of 2 positive integers")
+        self.__pos = pos
 
     def area(self):
         """int: the area of the square """
