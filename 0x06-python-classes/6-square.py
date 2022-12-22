@@ -58,7 +58,7 @@ of 2 positive integers")
                 print(" "*self.__pos[0] + "#"*self.__size)
         else:
             print("")
-    
+
     def isTuple(self, val):
         """ check whether val is the right tuple """
 
@@ -71,8 +71,3 @@ of 2 positive integers")
         if val[0] < 0 or val[1] < 0:
             return False
         return True
-
-
-
-
-
