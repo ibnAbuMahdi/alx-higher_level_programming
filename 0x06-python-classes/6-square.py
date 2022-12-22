@@ -15,8 +15,7 @@ class Square:
         else:
             self.__size = size
 
-        if type(pos) is tuple and len(pos) == 2\
-                and pos[0] >= 0 and pos[1] >= 0:
+        if self.isTuple(pos):
             self.__pos = pos
         else:
             raise TypeError("position must be a\
@@ -47,8 +46,7 @@ tuple of 2 positive integers")
 
     @position.setter
     def position(self, val):
-        if type(val) is tuple and len(val) == 2\
-                and val[0] >= 0 and val[1] >= 0:
+        if self.isTuple(val):
             self.__pos = val
         else:
             raise TypeError("position must be a tuple\
@@ -61,3 +59,21 @@ of 2 positive integers")
                 print(" "*self.__pos[0] + "#"*self.__size)
         else:
             print("")
+    
+    def isTuple(self, val):
+        """ check whether val is the right tuple """
+
+        if type(val) is not tuple:
+            return False
+        if len(val) != 2:
+            return False
+        if type(val[0]) is not int or type(val[1]) is not int:
+            return False
+        if val[0] < 0 or val[1] < 0:
+            return False
+        return True
+
+
+
+
+
