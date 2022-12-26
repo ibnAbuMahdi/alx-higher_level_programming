@@ -74,4 +74,7 @@ class SinglyLinkedList:
         while temp is not None and temp.next_node is not None:
             print(temp.data)
             temp = temp.next_node
-        return str(temp.data)
+        if temp is not None:
+            return str(temp.data)
+        else:
+            return ""
