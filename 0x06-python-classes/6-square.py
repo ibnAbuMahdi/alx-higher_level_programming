@@ -55,7 +55,7 @@ of 2 positive integers")
         """ prints the square using # """
         if self.__size > 0:
             if self.__pos[1] > 0:
-                print(" "*(self.__pos[1] - 1))
+                print("\n"*(self.__pos[1]), end="")
             for i in range(self.__size):
                 print(" "*self.__pos[0] + "#"*self.__size)
         else:
