@@ -51,7 +51,7 @@ int compare(listint_t *h, int i, int f, int d)
 	if (i == f)
 		return (1);
 
-	node_i = get_nodeint_at_index(h, i - d);
+	node_i = get_nodeint_at_index(h, 0);
 	node_f = get_nodeint_at_index(h, f - d);
 
 	if (i == f - 1)
@@ -74,16 +74,13 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	unsigned int i = 0;
 	listint_t *temp = NULL;
 
-	if (head)
+	temp = head;
+	while (temp)
 	{
-		temp = head;
-		while (temp)
-		{
-			if (i == index)
-				return (temp);
-			i++;
-			temp = temp->next;
-		}
+		if (i == index)
+			return (temp);
+		i++;
+		temp = temp->next;
 	}
 	return (NULL);
 }
