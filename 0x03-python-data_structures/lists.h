@@ -21,7 +21,7 @@ void free_listint(listint_t *head);
 
 int is_palindrome(listint_t **head);
 listint_t *get_nodeint_at_index(listint_t *, unsigned int);
-int compare(listint_t *, int, int);
+int compare(listint_t *, int, int, int);
 size_t listint_len(const listint_t *h);
 
 #endif /* LISTS_H */
