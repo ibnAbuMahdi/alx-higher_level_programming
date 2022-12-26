@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 import dis
-import hidden_4
-from hidden_4 import print_school
-dis.dis(hidden_4)
+from test import magic_calculation
 
-print_school()
-print(print_school())
+dis.dis(magic_calculation)
+
