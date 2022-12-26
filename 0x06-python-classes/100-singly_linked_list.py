@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ A singly linked list module """
 
+
 class Node:
     """ The node class of the list """
 
@@ -51,7 +52,7 @@ class SinglyLinkedList:
     def sorted_insert(self, val):
         """ insert node in a sorted fashion """
         if self.__head is None and type(val) is int:
-            self.__head = Node(val);
+            self.__head = Node(val)
         elif type(val) is int:
             temp = self.__head
             prev = None
@@ -74,6 +75,3 @@ class SinglyLinkedList:
             print(temp.data)
             temp = temp.next_node
         return str(temp.data)
-
-
-
