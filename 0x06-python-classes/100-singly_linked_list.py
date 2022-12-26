@@ -70,9 +70,8 @@ class SinglyLinkedList:
 
     def __str__(self):
         """ the string representation of the list """
-        if self.__head is not None:
-            temp = self.__head
-            while temp.next_node is not None:
-                print(temp.data)
-                temp = temp.next_node
-            return str(temp.data)
+        temp = self.__head
+        while temp is not None and temp.next_node is not None:
+            print(temp.data)
+            temp = temp.next_node
+        return str(temp.data)
