@@ -73,8 +73,3 @@ of 2 positive integers")
         if val[0] < 0 or val[1] < 0:
             return False
         return True
-
-
-
-
-
