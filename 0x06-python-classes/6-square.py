@@ -54,6 +54,8 @@ of 2 positive integers")
     def my_print(self):
         """ prints the square using # """
         if self.__size > 0:
+            if self.__pos[1] > 0:
+                print(" "*(self.__pos[1] - 1))
             for i in range(self.__size):
                 print(" "*self.__pos[0] + "#"*self.__size)
         else:
@@ -71,3 +73,8 @@ of 2 positive integers")
         if val[0] < 0 or val[1] < 0:
             return False
         return True
+
+
+
+
+
