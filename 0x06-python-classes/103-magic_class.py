@@ -5,7 +5,7 @@
 class MagicClass:
     """ where the magic happens """
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """ the init method """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
