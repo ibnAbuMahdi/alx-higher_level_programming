@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-import math
 """ A module for a class that does magic """
-
+import math
 
 class MagicClass:
     """ where the magic happens """
