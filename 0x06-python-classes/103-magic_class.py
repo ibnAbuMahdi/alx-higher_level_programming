@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import math
 """ A module for a class that does magic """
 
 
