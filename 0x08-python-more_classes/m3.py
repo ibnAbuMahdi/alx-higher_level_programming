@@ -10,7 +10,7 @@ print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perime
 
 
 
-print(str(my_rectangle))
+str(my_rectangle)
 
 print(repr(my_rectangle))
 
