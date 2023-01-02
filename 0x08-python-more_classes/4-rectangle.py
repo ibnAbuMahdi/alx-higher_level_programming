@@ -73,5 +73,3 @@ class Rectangle:
         """ returns the formal version of the class """
 
         return 'Rectangle('+str(self.__width)+', '+str(self.__height)+')'
-
-
