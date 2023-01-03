@@ -1,0 +1,34 @@
+>>> text_indent = __import__('5-text_indentation').text_indentation
+
+>>> text_indent("A boy is running")
+A boy is running
+>>> text_indent("A boy is running.")
+A boy is running.
+<BLANKLINE>
+
+>>> text_indent("A boy is running.")
+A boy is running.
+<BLANKLINE>
+
+>>> text_indent("A boy is running.    Is she walking?")
+A boy is running.
+<BLANKLINE>
+Is she walking?
+<BLANKLINE>
+
+>>> text_indent("    I am a student.")
+I am a student.
+<BLANKLINE>
+
+>>> text_indent("          .")
+.
+<BLANKLINE>
+
+>>> text_indent("          .?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+>>> text_indent("          ")
