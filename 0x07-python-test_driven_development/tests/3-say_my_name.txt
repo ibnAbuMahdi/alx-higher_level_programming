@@ -4,7 +4,7 @@
 My name is isa musa
 
 >>> say_name("isa")
-My name is isa 
+My name is isa
 
 >>> say_name(4, "isa")
 Traceback (most recent call last):

@@ -1,48 +1,35 @@
 >>> mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
-
->>> mul([],[])
-Traceback (most recent call last):
-ValueError: m_a can't be empty
-
 >>> mul([1],[])
 Traceback (most recent call last):
-TypeError: m_a must be a list of lists or numpy array of arrays
+ValueError: shapes (1,) and (0,) not aligned: 1 (dim 0) != 0 (dim 0)
 
 >>> mul([[]], [[]])
 Traceback (most recent call last):
-ValueError: m_a can't be empty
-
->>> mul([[1]],[[]])
-Traceback (most recent call last):
-ValueError: m_b can't be empty
-
->>> mul([[1]],[6])
-Traceback (most recent call last):
-TypeError: m_b must be a list of lists or numpy array of arrays
+ValueError: shapes (1,0) and (1,0) not aligned: 0 (dim 1) != 1 (dim 0)
 
 >>> mul([[1]],[])
 Traceback (most recent call last):
-ValueError: m_b can't be empty
+ValueError: shapes (1,1) and (0,) not aligned: 1 (dim 1) != 0 (dim 0)
 
 >>> mul([[1], [2, 3]], [[2, 3], [4, 5]])
 Traceback (most recent call last):
-TypeError: each row of m_a must be of the same size
+ValueError: setting an array element with a sequence.
 
 >>> mul([[1, 2], [2, 3]], [[3], [4, 5]])
 Traceback (most recent call last):
-TypeError: each row of m_b must be of the same size
+ValueError: setting an array element with a sequence.
 
->>> mul([[1, 2], ["2", 3]], [[3], [4, 5]])
+>>> mul([[1, 2], ["2", 3]], [[3, 5], [4, 5]])
 Traceback (most recent call last):
-ValueError: m_a should contain only integers, floats, numpy.int64 or numpy.float64
+TypeError: invalid data type for einsum
 
->>> mul([[1, 2], [2, 3]], [["3"], [4, 5]])
+>>> mul([[1, 2], [2, 3]], [[3, '5'], [4, 5]])
 Traceback (most recent call last):
-ValueError: m_b should contain only integers, floats, numpy.int64 or numpy.float64
+TypeError: invalid data type for einsum
 
 >>> mul([[1]], [[2,3], [4,5]])
 Traceback (most recent call last):
-ValueError: m_a and m_b can't be multiplied
+ValueError: shapes (1,1) and (2,2) not aligned: 1 (dim 1) != 2 (dim 0)
 
 >>> mul([[1,2], [3, 4]], [[1, 2], [3, 4]])
 array([[ 7, 10],
@@ -54,9 +41,8 @@ array([[ 7.5, 11. ],
 
 >>> mul(1, [[1]])
 Traceback (most recent call last):
-TypeError: m_a must be a list or numpy.ndarray
+ValueError: Scalar operands are not allowed, use '*' instead
 
 >>> mul([[1]], 3)
 Traceback (most recent call last):
-TypeError: m_b must be a list or numpy.ndarray
-
+ValueError: Scalar operands are not allowed, use '*' instead

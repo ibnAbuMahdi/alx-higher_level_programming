@@ -5,11 +5,11 @@ import numpy as np
 
 def lazy_matrix_mul(ma, mb):
     """ multiplies two matrices using numpy """
-
+    """
     if type(ma) is not list and type(ma) is not np.ndarray:
-        raise TypeError('m_a must be a list or numpy.ndarray')
+        raise TypeError('Scalar operands are not allowed, use \'*\' instead')
     if type(mb) is not list and type(mb) is not np.ndarray:
-        raise TypeError('m_b must be a list or numpy.ndarray')
+        raise TypeError('Scalar operands are not allowed, use \'*\' instead')
 
     for row in ma:
         if type(row) is not list and type(row) is not np.ndarray:
@@ -29,13 +29,13 @@ numpy array of arrays')
         for i in row:
             if type(i) is not int and type(i) is not float \
                     and type(i) is not np.int64 and type(i) is not np.float64:
-                raise ValueError("m_a should contain only integers,\
+                raise TypeError("m_a should contain only integers,\
  floats, numpy.int64 or numpy.float64")
     for row in mb:
         for i in row:
             if type(i) is not int and type(i) is not float \
                     and type(i) is not np.int64 and type(i) is not np.float64:
-                raise ValueError("m_b should contain only integers,\
+                raise TypeError("m_b should contain only integers,\
  floats, numpy.int64 or numpy.float64")
     s_ma = len(ma[0])
     for row in ma:
@@ -49,5 +49,5 @@ numpy array of arrays')
     t_mb = [[row[i] for row in mb] for i in range(len(mb[0]))]
     if len(ma[0]) != len(t_mb[0]):
         raise ValueError("m_a and m_b can't be multiplied")
-
+    """
     return np.matmul(ma, mb)

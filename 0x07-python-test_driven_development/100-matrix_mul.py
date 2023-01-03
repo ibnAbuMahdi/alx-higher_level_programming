@@ -25,11 +25,11 @@ def matrix_mul(ma, mb):
     for row in ma:
         for i in row:
             if type(i) is not int and type(i) is not float:
-                raise ValueError("m_a should contain only integers or floats")
+                raise TypeError("m_a should contain only integers or floats")
     for row in mb:
         for i in row:
             if type(i) is not int and type(i) is not float:
-                raise ValueError("m_b should contain only integers or floats")
+                raise TypeError("m_b should contain only integers or floats")
     s_ma = len(ma[0])
     for row in ma:
         if s_ma != len(row):

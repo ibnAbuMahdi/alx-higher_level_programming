@@ -10,7 +10,7 @@ def matrix_divided(mat, div):
     if type(div) is not int and type(div) is not float:
         raise TypeError('div must be a number')
     if type(mat) is not list:
-        raise TypeError('matrix must be a matrix (list of lists)\
+        raise TypeError('matrix must be a matrix (list of lists) \
 of integers/floats')
 
     size = -1
