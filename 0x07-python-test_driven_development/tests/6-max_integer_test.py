@@ -13,6 +13,15 @@ class TestMaxInteger(unittest.TestCase):
         self.assertraises(KeyError, max_integer, {1:3, 3: 5})
         self.assertraises(TypeError, max_integer, 1023)
     """
+    def test_max_at_beginning(self):
+        self.assertEqual(max_integer([5, 3, 2]), 5)
+
+    def test_mat_at_center(self):
+        self.assertEqual(max_integer([3, 5, 2]), 5)
+
+    def test_single(self):
+        self.assertEqual(max_integer([4]), 4)
+
     def test_equal(self):
         self.assertEqual(max_integer([1, 3, 5]), 5)
 
