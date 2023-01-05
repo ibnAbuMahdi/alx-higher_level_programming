@@ -47,18 +47,23 @@ while i < N:
 
     # if a solution is found, backtrack to the first row and next column
     if len(sol) == N:
-        j = sol[0][1] + 1
-        i = 0
         print(sol)
+        top = sol.pop()
+        col.remove(top[1])
+        ldiag.pop()
+        rdiag.pop()
+        ln = len(sol)
+    """        j = sol[0][1] + 1
+        i = 0
         sol.clear()
         ldiag.clear()
         rdiag.clear()
         col.clear()
-
+    """
     # if next valid position is not found, backtrack to the previous
     # queen and move it to the next column and same row and delete
     # all its diags and column
-    elif i > 0 and len(sol) > 0 and len(sol) == ln:
+    if i > 0 and len(sol) > 0 and len(sol) == ln:
         top = sol.pop()
         j = top[1] + 1
         i -= 1
