@@ -12,5 +12,3 @@ def say_my_name(fn, ln=""):
 
     if len(ln) > 0:
         print("My name is {} {}".format(fn, ln))
-    else:
-        print("My name is {}".format(fn))
