@@ -9,14 +9,14 @@ def matrix_divided(mat, div):
         raise ZeroDivisionError('division by zero')
     if type(div) is not int and type(div) is not float:
         raise TypeError('div must be a number')
-    if type(mat) is not list:
+    if type(mat) is not list or (len(mat) == 0):
         raise TypeError('matrix must be a matrix (list of lists) \
 of integers/floats')
 
     size = -1
     nList = []
     for row in mat:
-        if type(row) is not list:
+        if type(row) is not list or len(row) == 0:
             raise TypeError('matrix must be a matrix (list of \
 lists) of integers/floats')
 
