@@ -10,5 +10,4 @@ def say_my_name(fn, ln=""):
     if type(ln) is not str:
         raise TypeError('last_name must be a string')
 
-    if len(ln) > 0:
-        print("My name is {} {}".format(fn, ln))
+    print("My name is {} {}".format(fn, ln))
