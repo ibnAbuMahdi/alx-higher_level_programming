@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ 9-student.py """
-import json
 
 
 class Student:
@@ -14,4 +13,4 @@ class Student:
 
     def to_json(self):
         """ to json """
-        return json.loads(json.dumps(self.__dict__))
+        return self.__dict__

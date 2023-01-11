@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ 10-student.py """
-import json
 
 
 class Student:
@@ -15,11 +14,11 @@ class Student:
     def to_json(self, attrs=None):
         """ to json """
         if isinstance(attrs, list) and isinstance(attrs[0], str):
-            mdict = json.loads(json.dumps(self.__dict__))
+            mdict = self.__dict__
             ndict = {}
             for att in attrs:
                 if att in mdict:
                     ndict.update({att: att})
             return ndict
         else:
-            return json.loads(json.dumps(self.__dict__))
+            return self.__dict__
