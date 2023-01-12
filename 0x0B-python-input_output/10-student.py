@@ -13,12 +13,16 @@ class Student:
 
     def to_json(self, attrs=None):
         """ to json """
-        if isinstance(attrs, list) and len(attrs) > 0 and isinstance(attrs[0], str):
-            mdict = self.__dict__
+        if isinstance(attrs, list):
             ndict = {}
-            for att in attrs:
-                if att in mdict:
-                    ndict.update({att: mdict[att]})
-            return ndict
+            if len(attrs) > 0:
+                if isinstance(attrs[0], str):
+                    mdict = self.__dict__
+                    for att in attrs:
+                        if att in mdict:
+                            ndict.update({att: mdict[att]})
+                    return ndict
+            else:
+                return ndict
         else:
             return self.__dict__

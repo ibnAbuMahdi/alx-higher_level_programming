@@ -14,8 +14,7 @@ j_student_1 = student_1.to_json()
 
 j_student_2 = student_2.to_json(['first_name', 'age'])
 
-j_student_3 = student_2.to_json(['middle_name', 'age'])
-
+j_student_3 = student_2.to_json([])
 
 
 print(j_student_1)
