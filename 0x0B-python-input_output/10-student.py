@@ -18,7 +18,7 @@ class Student:
             ndict = {}
             for att in attrs:
                 if att in mdict:
-                    ndict.update({att: att})
+                    ndict.update({att: mdict[att]})
             return ndict
         else:
             return self.__dict__
