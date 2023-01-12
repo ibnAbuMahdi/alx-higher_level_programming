@@ -13,7 +13,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """ to json """
-        if isinstance(attrs, list) and isinstance(attrs[0], str):
+        if isinstance(attrs, list) and len(attrs) > 0 and isinstance(attrs[0], str):
             mdict = self.__dict__
             ndict = {}
             for att in attrs:

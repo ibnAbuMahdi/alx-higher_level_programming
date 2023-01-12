@@ -4,7 +4,7 @@
 
 def write_file(filename="", text=""):
     """ writes text to a file with name filename """
-    
+
     n = ""
     with open(filename, "w", encoding="utf-8") as f:
         f.write(text)

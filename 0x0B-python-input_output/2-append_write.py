@@ -7,8 +7,5 @@ def append_write(filename="", text=""):
     
     n = 0
     with open(filename, "a", encoding="utf-8") as f:
-            f.write(text)
-            n = f.tell()
-    #with open(filename, encoding="utf-8") as f:
-        #n = f.read()
+            n = f.write(text)
     return n 
