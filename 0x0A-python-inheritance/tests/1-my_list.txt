@@ -2,6 +2,14 @@
 
 >>> m = M()
 
+>>> print(m)
+[]
+
+>>> m.append(3)
+>>> m.append(-4)
+>>> m
+[3, -4]
+
 >>> ls = []
 >>> m = M(ls) 
 >>> m.print_sorted()
@@ -31,3 +39,4 @@
 >>> m = M([2, 2, 2, 2])
 >>> m.print_sorted()
 [2, 2, 2, 2]
+
