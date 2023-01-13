@@ -24,8 +24,23 @@ def print_stat(size, codes):
             print("{}: {}".format(key, val))
 
 
+def isvalid(line):
+    if not isinstance(line, str):
+        return 0
+    parts = line.split()
+    ip = parts[0].split(".")
+    for n in ip:
+        if not n.isdigit():
+            return 0
+    if parts[1] != "-":
+        return 0
+    return 1
+
+
 try:
     for line in sys.stdin:
+        if not isvalid(line):
+            break
         parse_line(line, codes, size)
         cnt += 1
         if (cnt > 0 and cnt % 10 == 0):
