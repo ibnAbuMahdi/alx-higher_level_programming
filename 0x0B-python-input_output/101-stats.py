@@ -28,7 +28,8 @@ try:
     for line in sys.stdin:
         parse_line(line, codes, size)
         cnt += 1
-        if cnt > 0 and cnt % 10 == 0:
+        if (cnt > 0 and cnt % 10 == 0):
             print_stat(size, codes)
+    print_stat(size, codes)
 except KeyboardInterrupt as interrupt:
     print_stat(size, codes)
