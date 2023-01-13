@@ -28,6 +28,8 @@ def isvalid(line):
     if not isinstance(line, str):
         return 0
     parts = line.split()
+    if not parts[-1].isdigit() or not parts[-2].isdigit():
+        return 0
     ip = parts[0].split(".")
     for n in ip:
         if not n.isdigit():
