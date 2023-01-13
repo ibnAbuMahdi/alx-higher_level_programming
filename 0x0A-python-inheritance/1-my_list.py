@@ -11,3 +11,4 @@ class MyList(list):
         self.mList = self.copy()
         self.mList.sort()
         print(self.mList)
+        return self.mList

@@ -5,7 +5,7 @@
 >>> m.__str__ #doctest: +ELLIPSIS
 <method-wrapper '__str__' of MyList object at 0x...>
 
->>> print(m)
+>>> m
 []
 
 >>> m.append(3)
