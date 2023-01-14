@@ -2,7 +2,7 @@
 
 Rectangle = __import__('8-rectangle').Rectangle
 
-BG = __import__('8-rectangle').BaseGeometry
+BG = __import__('7-base_geometry').BaseGeometry
 
 r = Rectangle(3, 5)
 
