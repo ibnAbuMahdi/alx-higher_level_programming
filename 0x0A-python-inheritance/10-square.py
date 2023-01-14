@@ -37,6 +37,9 @@ class Rectangle(BaseGeometry):
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
 
 
+Rectangle = __import__('9-rectangle.py').Rectangle
+
+
 class Square(Rectangle):
     """ Square class that inherits from Rectangle """
 
