@@ -9,5 +9,5 @@ def add_attribute(obj=None, name=None, val=None):
         raise TypeError('can\'t add new attribute')
     if obj is None or isinstance(obj,
                                  (str, int, dict, tuple, set, float, complex)):
-        raise TypeError('cant\'t add new attribute')
+        raise TypeError('can\'t add new attribute')
     obj.name = val
