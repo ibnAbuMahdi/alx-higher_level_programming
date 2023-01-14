@@ -5,14 +5,14 @@ add_attribute = __import__('101-add_attribute').add_attribute
 
 
 class MyClass():
-
+        __slots__ = ['fname']
         pass
 
 
 
 mc = MyClass()
 
-add_attribute(mc, "name", "John")
+add_attribute(mc, "name", "Holberton")
 
 print(mc.name)
 
