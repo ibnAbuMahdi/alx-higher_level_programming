@@ -2,7 +2,7 @@
 
 Rectangle = __import__('8-rectangle').Rectangle
 
-
+BG = __import__('8-rectangle').BaseGeometry
 
 r = Rectangle(3, 5)
 
@@ -12,7 +12,7 @@ print(r)
 
 print(dir(r))
 
-
+print(issubclass(Rectangle, BG))
 
 try:
 
