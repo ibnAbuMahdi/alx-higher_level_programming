@@ -8,7 +8,7 @@ class TestRectangleValueType(unittest.TestCase):
     """ Tests for types and values """
 
     def test_width(self):
-        ls = ["4", [4], {4}, (4,), {1:4}]
+        ls = ["4", [4], {4}, (4,), {1:4}, 4.0, 4j]
         for item in ls:
             with self.assertRaises(TypeError) as tm:
                 R(item, 2, 1, 2)
@@ -22,7 +22,7 @@ class TestRectangleValueType(unittest.TestCase):
             self.assertEqual(str(exc), "height must be > 0")
 
     def test_x(self):
-        ls = ["4", [4], {4}, (4,), {1:4}]
+        ls = ["4", [4], {4}, (4,), {1:4}, 4.0, 4j]
         for item in ls:
             with self.assertRaises(TypeError) as tm:
                 R(4, item, 1, 2)
@@ -36,7 +36,7 @@ class TestRectangleValueType(unittest.TestCase):
             self.assertEqual(str(exc), "x must be >= 0")
 
     def test_y(self):
-        ls = ["4", [4], {4}, (4,), {1:4}]
+        ls = ["4", [4], {4}, (4,), {1:4}, 4.0, 4j]
         for item in ls:
             with self.assertRaises(TypeError) as tm:
                 R(6, 3, item, 2)

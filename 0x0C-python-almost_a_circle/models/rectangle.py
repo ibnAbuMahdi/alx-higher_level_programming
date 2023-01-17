@@ -12,28 +12,24 @@ class Rectangle(B):
         if isinstance(height, int):
             if height <= 0:
                 raise ValueError('height must be > 0')
-            self.__height = height
         else:
             raise TypeError('height must be an integer')
 
         if isinstance(width, int):
             if width <= 0:
                 raise ValueError('width must be > 0')
-            self.__width = width
         else:
             raise TypeError('width must be an integer')
 
         if isinstance(x, int):
             if x < 0:
                 raise ValueError('x must be >= 0')
-            self.__x = x
         else:
             raise TypeError('x must be an integer')
 
         if isinstance(y, int):
             if y < 0:
                 raise ValueError('y must be >= 0')
-            self.__y = y
         else:
             raise TypeError('y must be an integer')
 
@@ -112,7 +108,9 @@ class Rectangle(B):
 {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
         return string
+
     def update(self, *args, **kwargs):
+        """ update square """
         if kwargs is not None and (args is None or len(args) == 0):
             for k, v in kwargs.items():
                 if k == "id":
@@ -141,8 +139,27 @@ class Rectangle(B):
             self.__height = args[2]
             self.__x = args[3]
         elif len(args) >= 5:
-            self.id = args[0]        
+            self.id = args[0]
             self.__width = args[1]
             self.__height = args[2]
             self.__x = args[3]
             self.__y = args[4]
+
+    def to_dictionary(self):
+        """  return customized dict version of Rectangle """
+        idict = self.__dict__
+        odict = dict()
+
+        for k, v in idict.items():
+            if k == '_Rectangle__width':
+                odict.update({'width': v})
+            elif k == '_Rectangle__height':
+                odict.update({'height': v})
+            elif k == '_Rectangle__x':
+                odict.update({'x': v})
+            elif k == '_Rectangle__y':
+                odict.update({'y': v})
+            elif k == 'id':
+                odict.update({'id': v})
+
+        return odict
