@@ -116,34 +116,34 @@ class Rectangle(B):
                 if k == "id":
                     self.id = v
                 elif k == "width":
-                    self.__width = v
+                    self.width = v
                 elif k == "height":
-                    self.__height = v
+                    self.height = v
                 elif k == 'x':
-                    self.__x = v
+                    self.x = v
                 elif k == 'y':
-                    self.__y = v
+                    self.y = v
 
         if len(args) == 1:
             self.id = args[0]
         elif len(args) == 2:
             self.id = args[0]
-            self.__width = args[1]
+            self.width = args[1]
         elif len(args) == 3:
             self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
+            self.width = args[1]
+            self.height = args[2]
         elif len(args) == 4:
             self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
         elif len(args) >= 5:
             self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-            self.__y = args[4]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
 
     def to_dictionary(self):
         """  return customized dict version of Rectangle """
