@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS hbtn_0d_usa.states(
 	name VARCHAR(256),
 	UNIQUE (id),
 	PRIMARY KEY (id)
-) type=InnoDB;
+);
