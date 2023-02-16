@@ -1,8 +1,8 @@
--- 4 never empty
+-- 5 unique id
 
--- create table id_not_null
+-- create table unique_id
 CREATE TABLE IF NOT EXISTS unique_id(
-	id INT DEFAULT 1 AUTO_INCREMENT,
+	id INT DEFAULT 1,
 	name VARCHAR(256),
 	UNIQUE (id)
 )
