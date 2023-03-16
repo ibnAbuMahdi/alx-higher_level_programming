@@ -1,5 +1,5 @@
 #!/usr/bin/node
-
+const rect = require('./3-rectangle');
 class Rectangle {
   constructor (w, h) {
     if (w > 0 && h > 0) {
@@ -10,10 +10,11 @@ class Rectangle {
 
   print () {
     for (let i = 0; i < this.height; i++) {
+      let str = '';
       for (let j = 0; j < this.width; j++) {
-        process.stdout.write('X');
+        str += 'X';
       }
-      process.stdout.write('\n');
+      console.log(str);
     }
   }
 
