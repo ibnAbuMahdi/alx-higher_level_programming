@@ -12,7 +12,7 @@ db_url = {'drivername': 'mysql',
           'host': 'localhost',
           'port': 3306}
 engine = create_engine('mysql+mysqldb://root:root@localhost:\
-                       3306/hbtn_0e_6_usa', pool_pre_ping=True)
+                       3306/hbtn_0e_100_usa', pool_pre_ping=True)
 
 
 class State(Base):
@@ -21,6 +21,8 @@ class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
+    cities = relationship("City", cascade="all, delete, delete-orphan",
+                          back_populates="state")
 
 
 Base.metadata.create_all(bind=engine)

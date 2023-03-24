@@ -5,10 +5,10 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import relationship
 from sqlalchemy.engine.url import URL
-from model_state import Base
+from relationship_state import Base
 
 engine = create_engine('mysql+mysqldb://root:root@localhost:\
-                       3306/hbtn_0e_6_usa', pool_pre_ping=True)
+                       3306/hbtn_0e_100_usa', pool_pre_ping=True)
 
 
 class City(Base):
@@ -18,6 +18,7 @@ class City(Base):
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
+    state = relationship("State", back_populates="cities")
 
 
 Base.metadata.create_all(bind=engine)
