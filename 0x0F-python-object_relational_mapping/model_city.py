@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" model_state """
+""" model_city class """
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import (create_engine)
