@@ -13,7 +13,5 @@ if __name__ == "__main__":
             print("No result")
         elif 'id' in j and 'name' in j and isinstance(j, dict):
             print("[{}] {}".format(j['id'], j['name']))
-        else:
-            print("Not a valid JSON")
     except requests.exceptions.JSONDecodeError as e:
         print("Not a valid JSON")
