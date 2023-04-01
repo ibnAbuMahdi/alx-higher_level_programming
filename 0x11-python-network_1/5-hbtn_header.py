@@ -5,4 +5,5 @@ from sys import argv as args
 
 if __name__ == "__main__":
     data = requests.get(args[1])
-    print(data.headers['X-Request-Id'])
+    if 'X-Request-Id' in dict(data.headers):
+        print(data.headers['X-Request-Id'])
