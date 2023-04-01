@@ -18,9 +18,9 @@ if __name__ == "__main__":
     class State(Base):
         """ State class that inherits Base """
 
-        __tablename__ = 'states'
-        id = Column(Integer, primary_key=True, nullable=False)
-        name = Column(String(128), nullable=False)
-
+        if __name__ == "__main__":
+            __tablename__ = 'states'
+            id = Column(Integer, primary_key=True, nullable=False)
+            name = Column(String(128), nullable=False)
 
     Base.metadata.create_all(bind=engine)
