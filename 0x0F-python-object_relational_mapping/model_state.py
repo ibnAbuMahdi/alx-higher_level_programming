@@ -14,13 +14,13 @@ db_url = {'drivername': 'mysql',
 engine = create_engine('mysql+mysqldb://root:root@localhost:\
                        3306/hbtn_0e_6_usa', pool_pre_ping=True)
 
+if __name__ == "__main__":
+    class State(Base):
+        """ State class that inherits Base """
 
-class State(Base):
-    """ State class that inherits Base """
-
-    __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, nullable=False)
-    name = Column(String(128), nullable=False)
+        __tablename__ = 'states'
+        id = Column(Integer, primary_key=True, nullable=False)
+        name = Column(String(128), nullable=False)
 
 
-Base.metadata.create_all(bind=engine)
+    Base.metadata.create_all(bind=engine)
