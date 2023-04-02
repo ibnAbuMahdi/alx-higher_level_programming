@@ -9,11 +9,10 @@ Base = declarative_base()
 engine = create_engine('mysql+mysqldb://root:root@localhost:\
                        3306/hbtn_0e_6_usa', pool_pre_ping=True)
 
+
 class State(Base):
     """ State class that inherits Base """
 
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
-
-

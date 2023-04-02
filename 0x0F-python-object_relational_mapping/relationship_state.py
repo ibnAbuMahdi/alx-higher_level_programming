@@ -25,4 +25,3 @@ class State(Base):
                           back_populates="state")
 
 
-Base.metadata.create_all(bind=engine)

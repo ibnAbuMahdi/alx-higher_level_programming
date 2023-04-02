@@ -21,4 +21,3 @@ class City(Base):
     state = relationship("State", back_populates="cities")
 
 
-Base.metadata.create_all(bind=engine)
