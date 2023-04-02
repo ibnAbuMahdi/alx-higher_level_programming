@@ -21,9 +21,9 @@ for instance in session.query(State).order_by(State.id):
         for city_ins in instance.cities:
             print("    ", end="")
             print(city_ins.id, city_ins.name, sep=": ")
-#
-#       query = session.query(State).order_by(State.id)
-#        for state in query.all():
-#            print("{}: {}".format(state.id, state.name))
-#            for city in state.cities:
-#                print("    {}: {}".format(city.id, city.name))
+
+        #query = session.query(State).order_by(State.id)
+        #for state in query.all():
+        #   print("{}: {}".format(state.id, state.name))
+        #   for city in state.cities:
+        #      print("    {}: {}".format(city.id, city.name))
