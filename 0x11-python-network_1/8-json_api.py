@@ -9,10 +9,11 @@ if __name__ == "__main__":
 
     try:
         j = data.json()
-        if len(j) == 0:
+        if data.headers.get('content-type') != 'application/json':
+            print("Not a valid JSON")
+        elif len(j) == 0:
             print("No result")
-        elif 'id' in j and 'name' in j and\
-                data.headers.get('content-type') == 'application/json':
+        elif 'id' in j and 'name' in j:
             print("[{}] {}".format(j['id'], j['name']))
         else:
             print("Not a valid JSON")
