@@ -11,7 +11,8 @@ if __name__ == "__main__":
         j = data.json()
         if len(j) == 0:
             print("No result")
-        elif 'id' in j and 'name' in j and isinstance(j, dict):
+        elif 'id' in j and 'name' in j and\
+                data.headers.get('content-type') == 'application/json':
             print("[{}] {}".format(j['id'], j['name']))
         else:
             print("Not a valid JSON")
