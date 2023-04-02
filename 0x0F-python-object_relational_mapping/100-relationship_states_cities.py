@@ -26,9 +26,9 @@ if len(sys.argv) == 4:
             print(e)
 
         query = session.query(State).filter(State.name == search)
-        row = query.first()
-        if row:
-            id_no = row.id
+        row = query.all()
+        if len(row):
+            id_no = row[-1].id
             san = City(name='San Francisco', state_id=id_no)
             try:
                 session.add(san)
