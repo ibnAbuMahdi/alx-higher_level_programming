@@ -17,11 +17,13 @@ if len(sys.argv) == 4:
         Session.configure(bind=engine)
         session = Session()
 
-        query = session.query(State).join(City,
-                                          State.id == City.state_id)\
+        query = session.query(City).join(State,
+                                         State.id == City.state_id)\
             .order_by(State.id, City.id)
-
-        for state in query.all():
-            print("{}: {}".format(state.id, state.name))
-            for city in state.cities:
+        id = None
+        for city in query.all():
+            if id is None or id != city.state.id:
+                print("{}: {}".format(city.state.id, city.state.name))
+                id = city.state.id
+            if city.state.id == id:
                 print("    {}: {}".format(city.id, city.name))
