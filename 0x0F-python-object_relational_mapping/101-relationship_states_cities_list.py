@@ -16,11 +16,11 @@ if len(sys.argv) == 4:
         Session = sessionmaker()
         Session.configure(bind=engine)
         session = Session()
-for instance in session.query(State).order_by(State.id):
-        print(instance.id, instance.name, sep=": ")
-        for city_ins in instance.cities:
-            print("    ", end="")
-            print(city_ins.id, city_ins.name, sep=": ")
+        for instance in session.query(State).order_by(State.id):
+            print(instance.id, instance.name, sep=": ")
+            for city_ins in instance.cities:
+                print("    ", end="")
+                print(city_ins.id, city_ins.name, sep=": ")
 
         #query = session.query(State).order_by(State.id)
         #for state in query.all():
