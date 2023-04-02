@@ -20,5 +20,3 @@ if __name__ == "__main__":
         state = query.first()
         if state:
             print("{}: {}".format(state.id, state.name))
-        else:
-            print()
