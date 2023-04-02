@@ -13,7 +13,7 @@ def find_peak(ls):
 
 def f_peak(ls, lo, m, h):
     """ fpeak find the peak """
-    if m == 0 or m == h - 1:
+    if m == 0 or (m == h - 1 and m != 1):
         return ls[m]
     if ls[m-1] > ls[m]:
         h = m
