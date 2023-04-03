@@ -10,5 +10,5 @@ if __name__ == "__main__":
                "X-GitHub-Api-Version": "2022-11-28"}
     data = requests.get("https://api.github.com/users/{}".format(args[1]),
                         headers=headers)
-    if 'id' in data.json()['id']:
+    if 'id' in data.json():
         print(data.json()['id'])
