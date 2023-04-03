@@ -10,6 +10,8 @@ if __name__ == "__main__":
                "X-GitHub-Api-Version": "2022-11-28"}
     data = requests.get("https://api.github.com/users/{}".format(args[1]),
                         headers=headers)
+    g_id = None
     if 'application/json' in data.headers.get('content-type') and\
             'id' in data.json():
-        print(data.json()['id'])
+        g_id = data.json()['id']
+    print(g_id)
