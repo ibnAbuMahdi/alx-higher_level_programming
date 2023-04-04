@@ -11,7 +11,7 @@ if __name__ == "__main__":
     cmts_dict = {}
     i = 1
     for cmt in cmts:
-        print("{}: {}".format(cmt['sha'], cmt['commit']['author']['name']))
+        print("{}: {}".format(cmt.get('sha'), cmt.get('commit').get('author').get('name')))
 #        cmts_dict[cmt['commit']['author']['date']] =\
 #                [cmt['sha'], cmt['commit']['author']['name']]
         if i == 10:
