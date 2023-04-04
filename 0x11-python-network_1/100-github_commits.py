@@ -6,7 +6,7 @@ from sys import argv as args
 if __name__ == "__main__":
     headers = {"Accept": "application/vnd.github+json"}
     url = "https://api.github.com/repos/{}/{}/commits"
-    data = requests.get(url.format(args[1], args[2]), headers=headers)
+    data = requests.get(url.format(args[1], args[2]))
     cmts = data.json()
     cmts_dict = {}
     i = 1
