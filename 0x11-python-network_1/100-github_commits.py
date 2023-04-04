@@ -11,8 +11,9 @@ if __name__ == "__main__":
     cmts_dict = {}
     i = 1
     for cmt in cmts:
-        cmts_dict[cmt['commit']['author']['date']] =\
-                [cmt['sha'], cmt['commit']['author']['name']]
+        print("{}: {}".format(cmt['sha'], cmt['commit']['author']['name']))
+#        cmts_dict[cmt['commit']['author']['date']] =\
+#                [cmt['sha'], cmt['commit']['author']['name']]
         if i == 10:
             break
         else:
@@ -20,5 +21,5 @@ if __name__ == "__main__":
     cmts_keys = list(cmts_dict.keys())
     cmts_keys.sort(reverse=True)
     cmts_sorted = {i: cmts_dict[i] for i in cmts_keys}
-    for k, v in cmts_sorted.items():
-        print("{}: {}".format(v[0], v[1]))
+#    for k, v in cmts_sorted.items():
+#        print("{}: {}".format(v[0], v[1]))
