@@ -8,5 +8,5 @@ if __name__ == "__main__":
     data = requests.get(url.format(args[1], args[2]))
     cmts = data.json()
     for cmt in list(data.json())[:10]:
-        print("{}: {}".format(cmt.get('sha'),
-                              cmt.get('commit').get('author').get('name')))
+        print("{}: {}".format(dict(cmt).get('sha'),
+                              dict(cmt).get('commit').get('author').get('name')))
