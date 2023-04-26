@@ -8,10 +8,12 @@ if (args.length === 3) {
     if (error === null && resp.statusCode === 200) {
       const todos = JSON.parse(body);
       const obj = {};
-      let c = 0;
       todos.forEach((e, i, a) => {
-        if (e.userId in obj) { if (e.completed) c++; } else { if (e.completed) c = 1; else c = 0; }
-        obj[e.userId] = c;
+        if (e.userId in obj) {
+          if (e.completed) obj[e.userId]++;
+        } else {
+          if (e.completed) obj[e.userId] = 1;
+        }
       });
       console.log(obj);
     }
